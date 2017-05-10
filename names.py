@@ -32,11 +32,7 @@ json_data_columns = "data_columns.json"
 records_with_names_filename = "anonymized_omschrijvingen+names.out.tab"
 maxn = 5
 
-random_items = []
-for k in range(0,200+1):
-    random_item = randint(1,no_of_lines_read+1)
-    random_items.append(random_item)
-print (random_items)
+
 
 def tokenize(t):
     #text = t.lower()
