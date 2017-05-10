@@ -4,7 +4,7 @@
 python3 names.py dummy-sample.tab
 ```
 
-This script anonymizes the comment fields ('omschrijving') in Dutch bank transactions.
+This script anonymizes the comment fields ('omschrijving') in Dutch bank transactions, by removing all person names.
 It takes as input file a tab-separated text file with the following columns:
 ```
 MINISTERIE, BOEKJAAR, NAAM LEVERANCIER, OMSCHRIJVING, BEDRAG, VALUTA, GB_DATUM, EUR_BEDRAG
@@ -21,6 +21,8 @@ The generated output is a tab-separated file with the following 3 columns:
 ```
 item id of original row, anonymized omschrijving (names replaced by ***), list of found names
 ```
+
+Evaluation showed that the coverage (recall) of the method is good, with around 95\% of the names removed. However, the price for achieving this high recall is that precision was reduced to around 50%. This implies that if 10 names are removed, 10 non-names are also removed from the data.
 
 # License
 
