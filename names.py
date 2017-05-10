@@ -25,6 +25,9 @@ no_of_lines_read = 500000
 
 
 datafilename = sys.argv[1]
+
+# the json files are stored as index of the data. If a large dataset is analyzed multiple times, it is only read once and
+# the following times the data is recovered from the json files
 json_ngrams_filename = "ngrams.json"
 json_inverted_index = "ngram_inverted_index.json"
 json_data_columns = "data_columns.json"
